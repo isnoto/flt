@@ -1,0 +1,50 @@
+<div>
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline" data-search-form="true" data-search-url=<%= api_v1_messages_url %>>
+
+      <select id="search-key-select" data-search-key="true" class="form-control mr-sm-4">
+        <option value="email">Email</option>
+        <option value="last_name">Last Name</option>
+      </select>
+
+      <label for="search-value" class="sr-only">Search</label>
+      <input data-search-value="true" type="text" class="form-control mr-sm-4" id="search-value" placeholder="Search value">
+
+      <button class="btn btn-primary" data-search-btn="true">Search</button>
+
+    </form>
+  </nav>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Email</th>
+      <th>
+        <a href="#" data-sort-field="true" data-sort-key="first_name" data-sort-direction="">
+          First Name
+          <i data-direction-icon="true"></i>
+        </a>
+      </th>
+      <th>Last Name</th>
+      <th>
+        <a href="#" data-sort-field="true" data-sort-key="amount" data-sort-direction="">
+          Amount
+          <i data-direction-icon="true"></i>
+        </a>
+      </th>
+    </tr>
+    </thead>
+
+    <tbody data-messages-container-el="true">
+    <% @messages.each do |message| %>
+      <tr data-test-message="true">
+        <td data-test-email="true"><%= message.email %></td>
+        <td data-test-first_name="true"><%= message.first_name %></td>
+        <td data-test-last_name="true"><%= message.last_name %></td>
+        <td data-test-amount="true"><%= message.amount %></td>
+      </tr>
+    <% end %>
+    </tbody>
+
+  </table>
+</div>

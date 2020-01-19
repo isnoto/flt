@@ -1,24 +1,24 @@
-# README
+## Requirements
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```Ruby 2.6.3```
+```MySQL 5.7```
+```yarn```
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+```gem install bundler```
+```bundle install```
+```yarn install```
+```rails db:setup```
 
-* System dependencies
+## Execute app
 
-* Configuration
+```rails s```
 
-* Database creation
+## Execute tests
 
-* Database initialization
+```rspec```
 
-* How to run the test suite
+## Messages endpoint
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```POST   /api/v1/messages```

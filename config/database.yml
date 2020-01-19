@@ -47,8 +47,6 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
-  <<: *default
-  database: flt_production
-  username: flt
-  password: <%= ENV['FLT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
